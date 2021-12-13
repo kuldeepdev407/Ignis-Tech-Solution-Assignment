@@ -1,3 +1,12 @@
+# Ignis Tech Solutions
+This is project for assigment for internship.
+It used Technologys Like:
+- html
+- bootstrap
+- css
+- python
+
+
 # Output of the Project
 
 ### 1. Simple Start Page
