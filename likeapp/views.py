@@ -28,18 +28,19 @@ def add_new(request):
                         location=data["location"],
                         time=data["time"],
                         is_liked=data["is_liked"])
-        event.save()   
+        event.save()  #saving data to database 
         return HttpResponseRedirect('/event/')
 
 
 #for liking the image
 def like_event(request):
     event= Events.objects.get(sno = request.POST['id'])
+    #chenking for pervious starte of the event is_liked
     if event.is_liked:
        event.is_liked = 0
     else:
         event.is_liked=1
-    event.save()
+    event.save()#saving data to database
     return HttpResponseRedirect('/event/') 
 
 #fetching events from database
