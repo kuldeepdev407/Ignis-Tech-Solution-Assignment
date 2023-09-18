@@ -11,5 +11,5 @@ class Events(models.Model):
     is_liked = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'events'

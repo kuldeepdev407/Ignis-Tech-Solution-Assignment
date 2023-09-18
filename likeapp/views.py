@@ -29,7 +29,7 @@ def add_new(request):
                         time=data["time"],
                         is_liked=data["is_liked"])
         event.save()  #saving data to database 
-        return HttpResponseRedirect('/event/')
+        return HttpResponseRedirect('/')
 
 
 #for liking the image
@@ -41,7 +41,7 @@ def like_event(request):
     else:
         event.is_liked=1
     event.save()#saving data to database
-    return HttpResponseRedirect('/event/') 
+    return HttpResponseRedirect('/') 
 
 #fetching events from database
 def main_page(request): 
